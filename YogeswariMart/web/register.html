@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | YOGESHWARI MART</title>
+     
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eaf2ff, #fff1e6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 15px;
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 520px;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            text-align: center;
+            color: #1565d8;
+            font-size: 27px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #d5dbe5;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #1565d8;
+            box-shadow: 0 0 0 3px rgba(21, 101, 216, 0.1);
+        }
+
+        .password-note {
+            color: #777;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .create-btn {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            background: #1565d8;
+            color: white;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .create-btn:hover {
+            background: #0d4eac;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #1565d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .register-container {
+                padding: 23px 18px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="logo">🛍️ YOGESHWARI MART</div>
+        <div class="tagline">Your Fashion & Beauty Shopping Destination</div>
+
+        <h2>Create a New Account</h2>
+        <p class="subtitle">Enter your details to get started.</p>
+
+        <form id="registerForm">
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    min="13"
+                    max="100"
+                    placeholder="Enter your age"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    minlength="3"
+                    maxlength="30"
+                    placeholder="Choose a username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    inputmode="numeric"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    placeholder="Enter 10-digit phone number"
+                    autocomplete="tel-national"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    minlength="8"
+                    placeholder="Create a strong password"
+                    autocomplete="new-password"
+                    required
+                >
+                <p class="password-note">
+                    Use at least 8 characters.
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    minlength="8"
+                    placeholder="Re-enter your password"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="create-btn">
+                Create Account
+            </button>
+
+            <p id="message" class="message" role="status"></p>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="index.html">Login</a>
+        </div>
+
+    </div>
+
+    <script>
+        const registerForm = document.getElementById("registerForm");
+        const phoneInput = document.getElementById("phone");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput =
+            document.getElementById("confirmPassword");
+        const message = document.getElementById("message");
+
+        phoneInput.addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, "").slice(0, 10);
+        });
+
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const fullName =
+                document.getElementById("fullName").value.trim();
+
+            const age =
+                Number(document.getElementById("age").value);
+
+            const username =
+                document.getElementById("username").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim().toLowerCase();
+
+            const phone = phoneInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (fullName.length < 2) {
+                showMessage("Please enter your full name.", false);
+                return;
+            }
+
+            if (!Number.isInteger(age) || age < 13 || age > 100) {
+                showMessage("Please enter a valid age.", false);
+                return;
+            }
+
+            if (!/^[a-zA-Z0-9_]{3,30}$/.test(username)) {
+                showMessage(
+                    "Username must be 3-30 characters using letters, numbers or underscore.",
+                    false
+                );
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showMessage("Please enter a valid email address.", false);
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+                showMessage(
+                    "Phone number must contain exactly 10 digits.",
+                    false
+                );
+                return;
+            }
+
+            if (password.length < 8) {
+                showMessage(
+                    "Password must contain at least 8 characters.",
+                    false
+                );
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showMessage(
+                    "Passwords do not match. Please try again.",
+                    false
+                );
+                return;
+            }
+
+            showMessage(
+                "Form validation successful! Account creation will be enabled after connecting the Java + MySQL backend.",
+                true
+            );
+        });
+
+        function showMessage(text, success) {
+            message.textContent = text;
+            message.style.color = success ? "#16803c" : "#d93025";
+        }
+    </script>
+
+</body>
+</html>
